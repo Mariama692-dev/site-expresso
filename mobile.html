@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile - Forfaits Yakalma & Illimix | Expresso</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left">
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Sénégal</a>
+                <a href="tel:600"><i class="fas fa-phone"></i> 600</a>
+            </div>
+            <div class="top-links">
+                <a href="pro.html">Espace Pro</a>
+                <a href="boutiques.html">Boutiques</a>
+                <a href="recrutement.html">Recrutement</a>
+                <a href="#">FR | EN</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-text">
+                <img src="https://www.expressotelecom.sn/wp-content/uploads/2023/05/logo-expresso.png" alt="Expresso" height="40">
+            </a>
+            <nav>
+                <a href="mobile.html" class="active">Mobile</a>
+                <a href="internet.html">Internet</a>
+                <a href="cash.html">Expresso Cash</a>
+                <a href="contact.html">Assistance</a>
+                <a href="compte.html" class="btn-login"><i class="fas fa-user"></i> My Account</a>
+            </nav>
+            <div class="burger"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-slider">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Offres Mobile</h1>
+                <p>Yakalma, Illimix, Roaming International</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABS -->
+    <section class="tabs-section">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="yakalma">Yakalma</button>
+                <button class="tab-btn" data-tab="illimix">Illimix</button>
+                <button class="tab-btn" data-tab="itinerance">itinerance</button>
+            </div>
+
+            <!-- YAKALMA -->
+            <div class="tab-content active" id="yakalma">
+                <div class="cards">
+                    <div class="card">
+                        <h3>Yakalma 250F</h3>
+                        <p class="prix">250 <span>FCFA</span></p>
+                        <ul>
+                            <li>1GB</li>
+                            <li>24H</li>
+                            <li>#303*1*1#</li>
+                        </ul>
+                        <button onclick="ouvrirPaiement('Yakalma 250F', 250, '#303*1*1#')">Buy</button>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="badge">BEST</div>
+                        <h3>Yakalma 500F</h3>
+                        <p class="prix">500 <span>FCFA</span></p>
+                        <ul>
+                            <li>2.5GB</li>
+                            <li>24H</li>
+                            <li>#303*1*2#</li>
+                        </ul>
+                        <button onclick="ouvrirPaiement('Yakalma 500F', 500, '#303*1*2#')">Buy</button>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Yakalma 1000F</h3>
+                        <p class="prix">1,000 <span>FCFA</span></p>
+                        <ul>
+                            <li>6GB</li>
+                            <li>24H</li>
+                            <li>#303*1*3#</li>
+                        </ul>
+                        <button onclick="ouvrirPaiement('Yakalma 1000F', 1000, '#303*1*3#')">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ILLIMIX -->
+            <div class="tab-content" id="illimix">
+                <div class="cards">
+                    <div class="card">
+                        <h3>Illimix Semaine</h3>
+                        <p class="prix">2,000 <span>FCFA</span></p>
+                        <ul>
+                            <li>Appels illimités Expresso</li>
+                            <li>2GB</li>
+                            <li>7 jours</li>
+                        </ul>
+                        <button onclick="ouvrirPaiement('Illimix Semaine', 2000, '*123#')">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROAMING -->
+            <div class="tab-content" id="roaming">
+                <div class="cards">
+                    <div class="card">
+                        <h3>Pass Voyage 7j</h3>
+                        <p class="prix">10,000 <span>FCFA</span></p>
+                        <ul>
+                            <li>1GB en Zone 1</li>
+                            <li>60min d'appels</li>
+                            <li>Valable 7 jours</li>
+                        </ul>
+                        <button onclick="ouvrirPaiement('Pass Voyage 7j', 10000, '*456#')">Activer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>expresso</h3>
+                    <p>Opérateur télécom au Sénégal.</p>
+                </div>
+                <div>
+                    <h4>Mobile</h4>
+                    <a href="mobile.html">Yakalma</a>
+                    <a href="mobile.html">Illimix</a>
+                    <a href="mobile.html">Roaming</a>
+                </div>
+                <div>
+                    <h4>Internet</h4>
+                    <a href="internet.html">Flybox</a>
+                    <a href="internet.html">Fibre</a>
+                </div>
+                <div>
+                    <h4>Assistance</h4>
+                    <a href="contact.html">FAQ</a>
+                    <a href="boutiques.html">Boutiques</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Expresso Sénégal. Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- POPUP PAIEMENT -->
+    <div id="popupPaiement" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="fermerPopup()">&times;</span>
+            <h2>Paiement</h2>
+            <p><strong>Produit :</strong> <span id="produit"></span></p>
+            <p><strong>Prix :</strong> <span id="prix"></span></p>
+            <p><strong>Méthode :</strong> <span id="methode">Non sélectionnée</span></p>
+            
+            <div class="paiement-grid">
+                <div class="paiement-card" onclick="choisirMethode('Wave', event)">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Wave</h3>
+                    <button type="button">Utiliser Wave</button>
+                </div>
+                <div class="paiement-card" onclick="choisirMethode('Orange Money', event)">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Orange Money</h3>
+                    <button type="button">Utiliser OM</button>
+                </div>
+                <div class="paiement-card" onclick="choisirMethode('CinetPay', event)">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>CinetPay</h3>
+                    <button type="button">Payer en ligne</button>
+                </div>
+            </div>
+
+            <p id="codeUSSD" class="code"></p>
+            
+            <div class="popup-actions">
+                <button class="btn-confirm" onclick="confirmerPaiement(event)">Confirmer paiement</button>
+                <button class="btn-cancel" onclick="fermerPopup()">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte | Expresso</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="compte-page">
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left">
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Sénégal</a>
+                <a href="tel:600"><i class="fas fa-phone"></i> 600</a>
+            </div>
+            <div class="top-links">
+                <a href="pro.html">Espace Pro</a>
+                <a href="boutiques.html">Boutiques</a>
+                <a href="#">Recrutement</a>
+                <a href="#">FR | EN</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-text">expresso</a>
+            <nav>
+                <a href="mobile.html">Mobile</a>
+                <a href="internet.html">Internet</a>
+                <a href="expressocash.html">Expresso Cash</a>
+                <a href="contact.html">Assistance</a>
+                <a href="compte.html" class="btn-login active"><i class="fas fa-user"></i> My Account</a>
+            </nav>
+            <div class="burger"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section class="account-wrapper">
+        <div class="container">
+            <div class="account-grid">
+                
+                <!-- SIDEBAR -->
+                <aside class="account-sidebar">
+                    <div class="user-info">
+                        <div class="avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Mariama SENE</h3>
+                        <p>+221 784038883</p>
+                    </div>
+                    
+                    <nav class="account-nav">
+                        <a href="compte.html" class="active"><i class="fas fa-home"></i> Tableau de bord</a>
+                        <a href="parametres.html"><i class="fas fa-cog"></i> Paramètres</a>
+                        <a href="index.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                    </nav>
+                </aside>
+
+                <!-- CONTENU -->
+                <div class="account-content">
+                    <h2>Tableau de bord</h2>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background:#a30be9;">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div>
+                                <p>Solde principal</p>
+                                <h3>2 500 FCFA</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background:#ff6600;">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <div>
+                                <p>Data restante</p>
+                                <h3>15.5 Go</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background:#28a745;">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p>Minutes restantes</p>
+                                <h3>120 min</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h3>Actions rapides</h3>
+                        <div class="actions-grid">
+                            <button class="action-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Recharger</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Acheter forfait</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>Transférer</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-receipt"></i>
+                                <span>Payer facture</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="recent-activity">
+                        <h3>Activité récente</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <i class="fas fa-arrow-down" style="color:#28a745;"></i>
+                                <div>
+                                    <p>Recharge 1000 FCFA</p>
+                                    <span>Aujourd'hui, 14:32</span>
+                                </div>
+                                <span class="amount plus">+1000 FCFA</span>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-arrow-up" style="color:#dc3545;"></i>
+                                <div>
+                                    <p>Achat forfait 5000 FCFA</p>
+                                    <span>Hier, 09:15</span>
+                                </div>
+                                <span class="amount minus">-5000 FCFA</span>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-arrow-up" style="color:#dc3545;"></i>
+                                <div>
+                                    <p>Transfert vers 77 888 99 00</p>
+                                    <span>12 Oct, 18:45</span>
+                                </div>
+                                <span class="amount minus">-500 FCFA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom"><p>&copy; 2026 Expresso Sénégal. Tous droits réservés</p></div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

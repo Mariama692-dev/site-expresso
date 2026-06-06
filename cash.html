@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresso Cash | Expresso</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-left">
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Sénégal</a>
+                <a href="tel:600"><i class="fas fa-phone"></i> 600</a>
+            </div>
+            <div class="top-links">
+                <a href="pro.html">Espace Pro</a>
+                <a href="boutiques.html">Boutiques</a>
+                <a href="recrutement.html">Recrutement</a>
+                <a href="#">FR | EN</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-text">
+                <img src="https://www.expressotelecom.sn/wp-content/uploads/2023/05/logo-expresso.png" alt="Expresso" height="40">
+            </a>
+            <nav>
+                <a href="mobile.html">Mobile</a>
+                <a href="internet.html">Internet</a>
+                <a href="cash.html" class="active">Expresso Cash</a>
+                <a href="contact.html">Assistance</a>
+                <a href="compte.html" class="btn-login"><i class="fas fa-user"></i> My Account</a>
+            </nav>
+            <div class="burger"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-slider">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Expresso Cash</h1>
+                <p>Envoyez, recevez et payez en toute sécurité</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFRES CASH -->
+    <section class="offres">
+        <div class="container">
+            <h2 class="section-titre">Services Expresso Cash</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="badge">RAPIDE</div>
+                    <h3>Rechargement Compte</h3>
+                    <p class="prix">Min 500 <span>FCFA</span></p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Recharge instantanée</li>
+                        <li><i class="fas fa-check"></i> Sans frais</li>
+                        <li><i class="fas fa-check"></i> Disponible 24h/24</li>
+                    </ul>
+                    <button onclick="ouvrirPaiement('Rechargement Expresso Cash', 500, '*601#')">Recharger</button>
+                </div>
+                
+                <div class="card">
+                    <h3>Transfert d'Argent</h3>
+                    <p class="prix">Frais 1%</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Vers tous réseaux</li>
+                        <li><i class="fas fa-check"></i> Transfert instantané</li>
+                        <li><i class="fas fa-check"></i> Suivi SMS</li>
+                    </ul>
+                    <button onclick="ouvrirPaiement('Transfert Expresso Cash', 0, '*602#')">Transférer</button>
+                </div>
+                
+                <div class="card">
+                    <div class="badge orange">NOUVEAU</div>
+                    <h3>Paiement Marchand</h3>
+                    <p class="prix">0% Frais</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Payer vos factures</li>
+                        <li><i class="fas fa-check"></i> Achat en ligne</li>
+                        <li><i class="fas fa-check"></i> Paiement boutiques</li>
+                    </ul>
+                    <button onclick="ouvrirPaiement('Paiement Marchand', 0, '*603#')">Payer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div><h3>expresso</h3><p>Opérateur télécom au Sénégal.</p></div>
+                <div><h4>Mobile</h4><a href="mobile.html">Yakalma</a><a href="mobile.html">Illimix</a></div>
+                <div><h4>Internet</h4><a href="internet.html">Flybox</a><a href="internet.html">Fibre</a></div>
+                <div><h4>Assistance</h4><a href="contact.html">FAQ</a><a href="boutiques.html">Boutiques</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Expresso Sénégal. Tous droits réservés</p></div>
+        </div>
+    </footer>
+
+    <!-- POPUP PAIEMENT -->
+    <div id="popupPaiement" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="fermerPopup()">&times;</span>
+            <h2>Paiement</h2>
+            <p><strong>Service :</strong> <span id="produit"></span></p>
+            <p><strong>Montant :</strong> <span id="prix"></span></p>
+            <p><strong>Méthode :</strong> <span id="methode">Non sélectionnée</span></p>
+            
+            <div class="paiement-grid">
+                <div class="paiement-card" onclick="choisirMethode('Wave', event)">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Wave</h3>
+                    <button type="button">Utiliser Wave</button>
+                </div>
+                <div class="paiement-card" onclick="choisirMethode('Orange Money', event)">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Orange Money</h3>
+                    <button type="button">Utiliser OM</button>
+                </div>
+            </div>
+
+            <p id="codeUSSD" class="code"></p>
+            
+            <div class="popup-actions">
+                <button class="btn-confirm" onclick="confirmerPaiement(event)">Confirmer paiement</button>
+                <button class="btn-cancel" onclick="fermerPopup()">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Burger menu
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('nav');
+        if (burger && nav) {
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+            });
+        }
+
+        // Variables paiement
+        let produitActuel = "";
+        let prixActuel = 0;
+        let codeUSSDActuel = "";
+        let methodeActuelle = "";
+
+        function ouvrirPaiement(produit, prix, code){
+            produitActuel = produit;
+            prixActuel = prix;
+            codeUSSDActuel = code;
+            
+            document.getElementById('produit').textContent = produit;
+            document.getElementById('prix').textContent = prix > 0 ? prix + " FCFA" : "Variable";
+            document.getElementById('methode').textContent = "Non sélectionnée";
+            document.getElementById('codeUSSD').textContent = "";
+            
+            document.querySelectorAll('.paiement-card').forEach(card => card.classList.remove('active'));
+            document.getElementById('popupPaiement').classList.add('active');
+            document.body.classList.add('popup-open');
+        }
+
+        function choisirMethode(methode, event){
+            methodeActuelle = methode;
+            document.getElementById('methode').textContent = methode;
+            
+            if(methode === "Wave" || methode === "Orange Money"){
+                document.getElementById('codeUSSD').textContent = "Composez : " + codeUSSDActuel;
+            }
+            
+            document.querySelectorAll('.paiement-card').forEach(card => card.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+        }
+
+        function confirmerPaiement(event){
+            if(!methodeActuelle){
+                alert("Choisissez une méthode de paiement d'abord");
+                return;
+            }
+
+            alert("1. Compose " + codeUSSDActuel + " sur ton téléphone\n2. Suis les instructions pour " + produitActuel + "\n3. Clique OK ici une fois fait");
+
+            const btn = event.target;
+            btn.textContent = 'Vérification...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                fermerPopup();
+                
+                const successMsg = document.createElement('div');
+                successMsg.textContent = '✅ Opération validée !';
+                successMsg.style.cssText = 'position:fixed;top:20px;right:20px;background:#28a745;color:#fff;padding:15px 25px;border-radius:8px;z-index:10000;font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,0.2);';
+                document.body.appendChild(successMsg);
+                
+                setTimeout(() => successMsg.remove(), 3000);
+                
+                btn.textContent = 'Confirmer paiement';
+                btn.disabled = false;
+            }, 1500);
+        }
+
+        function fermerPopup(){
+            document.getElementById('popupPaiement').classList.remove('active');
+            document.body.classList.remove('popup-open');
+            methodeActuelle = "";
+        }
+
+        // Fermer au clic dehors
+        const popupElement = document.getElementById('popupPaiement');
+        if (popupElement) {
+            popupElement.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    fermerPopup();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

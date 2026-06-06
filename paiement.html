@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Paiement</title>
+    <style>
+        body{
+            font-family: Arial;
+            text-align:center;
+            padding:50px;
+        }
+
+        .box{
+            max-width:400px;
+            margin:auto;
+            padding:20px;
+            border:1px solid #ddd;
+            border-radius:10px;
+        }
+
+        a{
+            display:block;
+            margin:10px 0;
+            padding:15px;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+        }
+
+        .wave{background:green;}
+        .om{background:orange;}
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Paiement</h2>
+
+    <p id="produit"></p>
+    <h3 id="prix"></h3>
+
+    <a class="wave" href="tel:*155#">
+        Payer avec Wave
+    </a>
+
+    <a class="om" href="tel:#144#">
+        Payer avec Orange Money
+    </a>
+
+</div>
+
+<script>
+    let produit = localStorage.getItem("produit");
+    let prix = localStorage.getItem("prix");
+
+    document.getElementById("produit").innerText = produit;
+    document.getElementById("prix").innerText = prix + " FCFA";
+</script>
+
+</body>
+</html>

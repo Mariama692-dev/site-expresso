@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historique | Expresso</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--primary:#a30be9;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',Arial,sans-serif;}
+body{background:#f8f9fa;}
+.container{width:90%;max-width:1300px;margin:auto;}
+header{background:var(--primary);padding:15px 0;}
+.logo-text{color:#fff;font-size:28px;font-weight:700;text-decoration:none;}
+.compte-page .account-wrapper{padding:60px 0;min-height:70vh;}
+.compte-page .account-grid{display:grid;grid-template-columns:280px 1fr;gap:40px;}
+.compte-page .account-sidebar{background:#fff;border-radius:15px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,0.08);}
+.compte-page .account-nav{display:flex;flex-direction:column;gap:8px;}
+.compte-page .account-nav a{padding:12px 15px;border-radius:10px;color:#666;text-decoration:none;display:flex;align-items:center;gap:12px;}
+.compte-page .account-nav a:hover,.compte-page .account-nav a.active{background:#a30be9;color:#fff;}
+.activity-item{display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid #f0f0f0;background:#fff;border-radius:10px;margin-bottom:10px;padding:15px;}
+.amount.plus{color:#28a745;font-weight:700;margin-left:auto;}
+.amount.minus{color:#dc3545;font-weight:700;margin-left:auto;}
+@media(max-width:992px){.compte-page .account-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body class="compte-page">
+<header><div class="container"><a href="index.html" class="logo-text">expresso</a></div></header>
+
+<section class="account-wrapper">
+<div class="container">
+<div class="account-grid">
+<aside class="account-sidebar">
+<nav class="account-nav">
+<a href="compte.html"><i class="fas fa-home"></i> Tableau de bord</a>
+<a href="mes-lignes.html"><i class="fas fa-sim-card"></i> Mes lignes</a>
+<a href="factures.html"><i class="fas fa-file-invoice"></i> Factures</a>
+<a href="historique.html" class="active"><i class="fas fa-history"></i> Historique</a>
+<a href="parametres.html"><i class="fas fa-cog"></i> Paramètres</a>
+</nav>
+</aside>
+
+<div class="account-content">
+<h2>Historique des transactions</h2>
+<div class="activity-item">
+<i class="fas fa-arrow-down" style="color:#28a745;"></i>
+<div><p>Recharge 1000 FCFA</p><span>Aujourd'hui, 14:32</span></div>
+<span class="amount plus">+1000 FCFA</span>
+</div>
+<div class="activity-item">
+<i class="fas fa-arrow-up" style="color:#dc3545;"></i>
+<div><p>Achat forfait 5000 FCFA</p><span>Hier, 09:15</span></div>
+<span class="amount minus">-5000 FCFA</span>
+</div>
+<div class="activity-item">
+<i class="fas fa-arrow-up" style="color:#dc3545;"></i>
+<div><p>Transfert vers 77 888 99 00</p><span>12 Oct, 18:45</span></div>
+<span class="amount minus">-500 FCFA</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>
